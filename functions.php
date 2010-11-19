@@ -94,8 +94,26 @@ function remove_dashboard_widgets() {
 }
 if (!current_user_can('manage_options')) {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
-}
+} ?>
 
+<?php 
+// asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+//	 change the UA-XXXXX-X to be your site's ID
+/*add_action('wp_footer', 'async_google_analytics');
+function async_google_analytics() { ?>
+	<script>
+	var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+		(function(d, t) {
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+		})(document, 'script');
+	</script>
+<?php }*/ ?>
+
+<?php
 /*
  * A default custom post type. DELETE from here to the end if you don't want any custom post types
  */
@@ -143,5 +161,4 @@ function cpt_icons() {
             background-position:6px 7px!important;
         }
     </style>
-<?php }*/
- ?>
+<?php }*/ ?>
