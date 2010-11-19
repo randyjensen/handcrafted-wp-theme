@@ -5,7 +5,7 @@
  */
 ?>
 
-	</div><!-- #main -->
+	</div><!-- #main  -->
 
 	<footer id="colophon" role="contentinfo">
 			<div id="site-generator">
