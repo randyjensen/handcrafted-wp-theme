@@ -3,8 +3,8 @@ Theme Name: themename
 Theme URI: http://www.thewebsite.com
 Author: Randy Jensen & Randy Hoyt
 Author URI: http://www.randyjensenonline.com | http://www.randyhoyt.com
-Description: HTML5 starter theme based off Ian Stewart's HTML5 Toolbox Theme with other goodies added plus chunks of Paul Irish's HTML5 Boilerplate mixed in for good measure. Mix well.
-Version: 1.0
+Description: HTML5 starter theme based off Ian Stewart's HTML5 Toolbox Theme with other goodies added plus chunks of Paul Irish's HTML5 Boilerplate mixed in for good measure. Shake well.
+Version: 0.8
 */
 
 /* html5doctor.com Reset Stylesheet \\v1.6.1 \\ Last Updated: 2010-09-17 \\ http://richclarkdesign.com \\ @rich_clark */
@@ -353,52 +353,6 @@ button {width: auto; overflow: visible;}
 	margin: 0 0 1em;
 }
 
-/* 404 page */
-.error404 .widget {
-	float: left;
-	width: 33%;
-}
-.error404 .widget .widgettitle,
-.error404 .widget ul {
-	margin-right: 1em;
-}
-.error404 .widget_tag_cloud {
-	clear: both;
-	float: none;
-	width: 100%;
-}
-
-/* Notices */
-.post .notice,
-.error404 #searchform {
-	background: #eee;
-	display: block;
-	padding: 1em;
-}
-
-/* Image Attachments */
-.image-attachment div.entry-meta {
-	float: left;
-}
-.image-attachment nav {
-	float: right;
-	margin: 0 0 1em 0;
-}
-.image-attachment .entry-content {
-	clear: both;
-}
-.image-attachment .entry-content .entry-attachment {
-	background: #eee;
-	margin: 0 0 1em;
-	padding: 1em;
-	text-align: center;
-}
-.image-attachment .entry-content .attachment {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-}
-
 
 /*
  *
@@ -442,28 +396,7 @@ img.alignright {
 	margin: .5em;
 }
 
-
-/*
- *
- * Forms
- *
- */
-#searchform label {
-	display: none;
-}
-#searchform input#s {
-	width: 60%;
-}
-input[type=text],
-input#s {
-	margin: 0 1em 0 0;
-	width: 60%;
-}
-textarea {
-	width: 80%;
-}
-
-/* Class for labelling required form items */
+/* Forms - Class for labelling required form items */
 .required {
 	color: #cc0033;
 }
@@ -496,27 +429,6 @@ article.comment {
 }
 #respond .form-allowed-tags code {
 	display: block;
-}
-
-
-/*
- *
- * Widgets
- *
- */
-.widget-area {
-	background: #ffc0cb;
-	padding: 1em 0 0;
-}
-.widget {
-	display: block;
-	padding: 0 1em;
-}
-.widget-area .widget_search {
-	overflow: hidden;
-}
-.widget-area .widget_search input {
-	float: left;
 }
 
 
