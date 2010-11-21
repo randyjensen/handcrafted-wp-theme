@@ -60,7 +60,7 @@ add_theme_support( 'automatic-feed-links' );
 /**
  * This theme uses post thumbnails
  */
-	add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails' );
 
 /**
  * Register widgetized area and update sidebar with default widgets

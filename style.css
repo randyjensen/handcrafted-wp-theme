@@ -359,12 +359,6 @@ button {width: auto; overflow: visible;}
  * Images
  *
  */
-a img {
-	border: none;
-}
-p img {
-	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
-}
 /*
 Resize images to fit the main content area.
 - Applies only to images uploaded via WordPress by targeting size-* classes.
