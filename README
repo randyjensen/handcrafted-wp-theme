@@ -1,0 +1,43 @@
+#  Handcrafted WP Starter Theme [http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/](http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/)
+
+## Changelog
+
+### v 0.8 : November 21st, 2010
+
+## Huge Thanks:
+
+Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
+
+## Summary:
+
+1.  Cross-browser compatible
+2.  HTML5 ready with reset
+3.  Mobile browser optimizations
+4.  IE specific classes for maximum cross-browser control
+5.  An optimal print stylesheet, performance optimized
+6.  iOS, Android, Opera Mobile-adaptable markup and CSS skeleton.
+7.  Google CDN hosted jQuery with fallback
+8.  Modernizr to target specific browser functionality
+9.  Chrome frame enabled by default
+10. 3 managed WordPress 3.0 menus (Primary, Footer, Utility)
+11. Abiltiy to easily remove unnecessary code from <head>
+12. The witch is dead! (aka: capital_P_dangit)
+13. Remove inline comment CSS
+14. Post thumbnails enabled
+15. Widgetized sidebar with default widgets
+16. Remove useless dashboard widgets for non-admins
+17. Optimized asynchronous Google Analytics
+18. Custom Post Type with custom icon ready to go
+19. Basic site layout
+20. General awesome-ness
+
+
+## License:
+
+Major components:
+
+* Toolbox theme: GPL
+* Modernizr: MIT/BSD license
+* jQuery: MIT/GPL license
+* HTML5Doctor CSS reset: Creative Commons 3.0
+* CSS Reset Reloaded: Public Domain
