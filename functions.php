@@ -24,15 +24,15 @@ if ( ! isset( $content_width ) )
 /**
  * Remove code from the <head>
  */
-//remove_action('wp_head', 'rsd_link'); Might be necessary if you or other people on this site use remote editors.
-//remove_action('wp_head', 'wp_generator'); Hide the version of WordPress you're running
-//remove_action('wp_head', 'feed_links', 2); Display the links to the general feeds: Post and Comment Feed
-//remove_action('wp_head', 'feed_links_extra', 3); Display the links to the extra feeds such as category feeds
-//remove_action('wp_head', 'index_rel_link'); Displays relations link for site index
-//remove_action('wp_head', 'wlwmanifest_link'); Might be necessary if you or other people on this site use Windows Live Writer.
+//remove_action('wp_head', 'rsd_link'); // Might be necessary if you or other people on this site use remote editors.
+//remove_action('wp_head', 'wp_generator'); // Hide the version of WordPress you're running
+//remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed
+//remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
+//remove_action('wp_head', 'index_rel_link'); // Displays relations link for site index
+//remove_action('wp_head', 'wlwmanifest_link'); // Might be necessary if you or other people on this site use Windows Live Writer.
 //remove_action('wp_head', 'start_post_rel_link', 10, 0); // Start link
 //remove_action('wp_head', 'parent_post_rel_link', 10, 0); // Prev link
-//remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); Display relational links for the posts adjacent to the current post.
+//remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); // Display relational links for the posts adjacent to the current post.
 remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
 remove_filter( 'the_title', 'capital_P_dangit' );
 remove_filter( 'comment_text', 'capital_P_dangit' );
@@ -83,14 +83,14 @@ add_action( 'init', 'toolbox_widgets_init' );
 function remove_dashboard_widgets() {
 	global $wp_meta_boxes;
 
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
-	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
-	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
-	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
-	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
-	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']); // Plugins widget
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']); // WordPress Blog widget
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']); // Other WordPress News widget
+	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']); // Right Now widget
+	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']); // Quick Press widget
+	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']); // Incoming Links widget
+	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']); // Recent Drafts widget
+	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']); // Recent Comments widget
 }
 if (!current_user_can('manage_options')) {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
