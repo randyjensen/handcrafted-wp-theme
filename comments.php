@@ -4,18 +4,18 @@
  * @subpackage themename
  */
 
-if ( ! function_exists( 'toolbox_comment' ) ) :
+if ( ! function_exists( 'handcraftedwp_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own toolbox_comment(), and that function will be used instead.
+ * simply create your own handcraftedwp_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since Toolbox 0.4
+ * @since HandcraftedWP 0.4
  */
-function toolbox_comment( $comment, $args, $depth ) {
+function handcraftedwp_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case '' :
@@ -61,7 +61,7 @@ function toolbox_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for toolbox_comment()
+endif; // ends check for handcraftedwp_comment()
 
 ?>
 
@@ -92,7 +92,7 @@ endif; // ends check for toolbox_comment()
 		<?php endif; // check for comment navigation ?>
 
 		<ol class="commentlist">
-			<?php wp_list_comments( array( 'callback' => 'toolbox_comment' ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'handcraftedwp_comment' ) ); ?>
 		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>

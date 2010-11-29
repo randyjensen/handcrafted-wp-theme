@@ -65,7 +65,7 @@ add_theme_support( 'post-thumbnails' );
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function toolbox_widgets_init() {
+function handcraftedwp_widgets_init() {
 	register_sidebar( array (
 		'name' => __( 'Sidebar', 'themename' ),
 		'id' => 'sidebar',
@@ -75,7 +75,7 @@ function toolbox_widgets_init() {
 		'after_title' => '</h4>',
 	) );
 }
-add_action( 'init', 'toolbox_widgets_init' );
+add_action( 'init', 'handcraftedwp_widgets_init' );
 
 /*
  * Remove senseless dashboard widgets for non-admins. (Un)Comment or delete as you wish.
