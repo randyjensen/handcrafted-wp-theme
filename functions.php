@@ -63,6 +63,11 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 
 /**
+ * This enables post formats. If you use this, make sure to delete any that you aren't going to use.
+ */
+//add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'video', 'gallery', 'chat', 'link', 'quote', 'status' ) );
+
+/**
  * Register widgetized area and update sidebar with default widgets
  */
 function handcraftedwp_widgets_init() {
