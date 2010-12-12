@@ -2,11 +2,16 @@
 
 ## Changelog
 
-### v 0.8 : November 21st, 2010
+### v 0.8.2 : November 21st, 2010
 
 ## Huge Thanks:
 
 Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
+
+## Recent Changes (0.8.2)
+
+1. Added Post formats, commented out
+2. Easily remove meta boxes from Post and Page screens, commented out
 
 ## Summary:
 
@@ -15,7 +20,7 @@ Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
 3.  Mobile browser optimizations
 4.  IE specific classes for maximum cross-browser control
 5.  An optimal print stylesheet, performance optimized
-6.  iOS, Android, Opera Mobile-adaptable markup and CSS skeleton.
+6.  iOS, Android, Opera mobile-adaptable markup & CSS skeleton
 7.  Google CDN hosted jQuery with fallback
 8.  Modernizr to target specific browser functionality
 9.  Chrome frame enabled by default
@@ -29,7 +34,9 @@ Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
 17. Optimized asynchronous Google Analytics
 18. Custom Post Type with custom icon ready to go
 19. Basic site layout
-20. General awesome-ness
+20. Post formats ready to go but commented out
+21. Easily remove meta boxes from Post and Page screens
+22. General awesome-ness
 
 
 ## License:

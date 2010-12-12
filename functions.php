@@ -44,6 +44,31 @@ remove_filter( 'comment_text', 'capital_P_dangit' );
 add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );*/
 
 /**
+ * Remove meta boxes from Post and Page Screens
+ */
+function customize_meta_boxes() {
+  /* These remove meta boxes from POSTS */
+  //remove_meta_box('postcustom','post','normal'); // Hide Custom Fields
+  //remove_meta_box('trackbacksdiv','post','normal'); // Hide Trackbacks Box
+  //remove_meta_box('commentstatusdiv','post','normal'); // Hide Discussions Box
+  //remove_meta_box('commentsdiv','post','normal'); // Hide Comments Box
+  //remove_meta_box('tagsdiv-post_tag','post','normal'); // Hide Post Tags Box
+  //remove_meta_box('postexcerpt','post','normal'); // Hide Excerpt Box
+  //remove_meta_box('categorydiv','post','normal'); // Hide Category Box
+  //remove_meta_box('authordiv','post','normal'); // Hide Author Box
+  //remove_meta_box('revisionsdiv','post','normal'); // Hide Revisions Box
+
+  /* These remove meta boxes from PAGES */
+  //remove_meta_box('postcustom','page','normal');  // Hide Custom Fields Box
+  //remove_meta_box('trackbacksdiv','page','normal'); // Hide Trackbacks Box
+  //remove_meta_box('commentstatusdiv','page','normal'); // Hide Discussion Box
+  //remove_meta_box('commentsdiv','page','normal'); // Hide Comments Box
+  //remove_meta_box('authordiv','page','normal'); // Hide Authors Box
+  //remove_meta_box('revisionsdiv','page','normal'); // Hide Revisions Box
+}
+add_action('admin_init','customize_meta_boxes');
+
+/**
  * This theme uses wp_nav_menus() for the header menu, utility menu and footer menu.
  */
 register_nav_menus( array(
