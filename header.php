@@ -4,11 +4,11 @@
  * @subpackage themename
  */
 ?><!DOCTYPE html>
-<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?> class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -41,8 +41,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 	<!-- Place favicon.ico and apple-touch-icon.png in the images folder -->
-	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php bloginfo( 'template_directory' ); ?>/images/apple-touch-icon.png"><!--60X60-->
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png"><!--60X60-->
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen, projection" />
@@ -50,8 +50,9 @@
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
-	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-	<script src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr-1.6.min.js"></script>
+	<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 	
 	<?php wp_head(); ?>
 	</head>

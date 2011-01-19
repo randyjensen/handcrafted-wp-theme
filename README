@@ -2,11 +2,19 @@
 
 ## Changelog
 
-### v 0.8.2 : November 21st, 2010
+### v 0.8.3 : January 19th, 2011
 
 ## Huge Thanks:
 
-Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
+Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 
+Boilerplate.
+
+## Recent Changes (0.8.3)
+
+1. Removed Modernizr and added Remy Sharp's HTML5shiv instead. So few people need all the awesome power of Modernizr, I think this makes sense.
+2. Updated jQuery to 1.4.4
+3. Was referencing jQuery 1.4.3 locally in the footer but the bundled version was 1.4.2. Fixed.
+4. Changed all template_directory references to get_template_directory_uri per the Theme-Check plugin. Hat tip to @colorfultones
 
 ## Recent Changes (0.8.2)
 
@@ -22,11 +30,11 @@ Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
 5.  An optimal print stylesheet, performance optimized
 6.  iOS, Android, Opera mobile-adaptable markup & CSS skeleton
 7.  Google CDN hosted jQuery with fallback
-8.  Modernizr to target specific browser functionality
+8.  HTML5 Shiv to enable support for IE
 9.  Chrome frame enabled by default
 10. 3 managed WordPress 3.0 menus (Primary, Footer, Utility)
 11. Abiltiy to easily remove unnecessary code from <head>
-12. The witch is dead! (aka: capital_P_dangit)
+12. capital_P_dangit is dead!
 13. Remove inline comment CSS
 14. Post thumbnails enabled
 15. Widgetized sidebar with default widgets
@@ -44,7 +52,6 @@ Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 Boilerplate.
 Major components:
 
 * Toolbox theme: GPL
-* Modernizr: MIT/BSD license
 * jQuery: MIT/GPL license
 * HTML5Doctor CSS reset: Creative Commons 3.0
 * CSS Reset Reloaded: Public Domain
