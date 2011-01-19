@@ -12,7 +12,7 @@ Boilerplate.
 ## Recent Changes (0.8.3)
 
 1. Removed Modernizr and added Remy Sharp's HTML5shiv instead. So few people need all the awesome power of Modernizr, I think this makes sense.
-2. Updated jQuery to 1.4.4
+2. Updated Google CDN version of jQuery to 1.4.4
 3. Was referencing jQuery 1.4.3 locally in the footer but the bundled version was 1.4.2. Fixed.
 4. Changed all template_directory references to get_template_directory_uri per the Theme-Check plugin. Hat tip to @colorfultones
 
