@@ -125,9 +125,7 @@ function remove_dashboard_widgets() {
 if (!current_user_can('manage_options')) {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 } ?>
-
-<?php 
-// asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+<?php // asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
 //	 change the UA-XXXXX-X to be your site's ID
 /*add_action('wp_footer', 'async_google_analytics');
 function async_google_analytics() { ?>
@@ -142,9 +140,7 @@ function async_google_analytics() { ?>
 		})(document, 'script');
 	</script>
 <?php }*/ ?>
-
-<?php
-/*
+<?php /*
  * A default custom post type. DELETE from here to the end if you don't want any custom post types
  */
 /*add_action('init', 'create_boilertemplate_cpt');
