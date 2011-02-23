@@ -9,6 +9,10 @@
 Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 
 Boilerplate.
 
+## Recent Changes (0.8.4)
+
+1. Added code to functions.php to remove admin bar in 3.1
+
 ## Recent Changes (0.8.3)
 
 1. Removed Modernizr and added Remy Sharp's HTML5shiv instead. So few people need all the awesome power of Modernizr, I think this makes sense.
