@@ -25,7 +25,6 @@ if ( ! isset( $content_width ) )
  * Remove code from the <head>
  */
 //remove_action('wp_head', 'rsd_link'); // Might be necessary if you or other people on this site use remote editors.
-//remove_action('wp_head', 'wp_generator'); // Hide the version of WordPress you're running
 //remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed
 //remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
 //remove_action('wp_head', 'index_rel_link'); // Displays relations link for site index
@@ -36,6 +35,9 @@ if ( ! isset( $content_width ) )
 remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
 remove_filter( 'the_title', 'capital_P_dangit' );
 remove_filter( 'comment_text', 'capital_P_dangit' );
+// Hide the version of WordPress you're running from source and RSS feed // Want to JUST remove it from the source? Try: remove_action('wp_head', 'wp_generator');
+/*function hcwp_remove_version() {return '';}
+add_filter('the_generator', 'hcwp_remove_version');*/
 // This function removes the comment inline css
 /*function twentyten_remove_recent_comments_style() {
 	global $wp_widget_factory;

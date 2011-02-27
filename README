@@ -12,6 +12,7 @@ Boilerplate.
 ## Recent Changes (0.8.5)
 
 1. Small change to loop.php on line 26, reflecting change in Ian Stewart's Toolbox theme
+2. Updated the "remove version number" code so it removes from source and RSS feed
 
 ## Recent Changes (0.8.4)
 
