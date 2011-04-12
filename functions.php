@@ -49,24 +49,24 @@ add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );*/
  * Remove meta boxes from Post and Page Screens
  */
 function customize_meta_boxes() {
-  /* These remove meta boxes from POSTS */
-  //remove_meta_box('postcustom','post','normal'); // Hide Custom Fields
-  //remove_meta_box('trackbacksdiv','post','normal'); // Hide Trackbacks Box
-  //remove_meta_box('commentstatusdiv','post','normal'); // Hide Discussions Box
-  //remove_meta_box('commentsdiv','post','normal'); // Hide Comments Box
-  //remove_meta_box('tagsdiv-post_tag','post','normal'); // Hide Post Tags Box
-  //remove_meta_box('postexcerpt','post','normal'); // Hide Excerpt Box
-  //remove_meta_box('categorydiv','post','normal'); // Hide Category Box
-  //remove_meta_box('authordiv','post','normal'); // Hide Author Box
-  //remove_meta_box('revisionsdiv','post','normal'); // Hide Revisions Box
+   /* These remove meta boxes from POSTS */
+  //remove_post_type_support("post","excerpt"); //Remove Excerpt Support
+  //remove_post_type_support("post","author"); //Remove Author Support
+  //remove_post_type_support("post","revisions"); //Remove Revision Support
+  //remove_post_type_support("post","comments"); //Remove Comments Support
+  //remove_post_type_support("post","trackbacks"); //Remove trackbacks Support
+  //remove_post_type_support("post","editor"); //Remove Editor Support
+  //remove_post_type_support("post","custom-fields"); //Remove custom-fields Support
+  //remove_post_type_support("post","title"); //Remove Title Support
 
+  
   /* These remove meta boxes from PAGES */
-  //remove_meta_box('postcustom','page','normal');  // Hide Custom Fields Box
-  //remove_meta_box('trackbacksdiv','page','normal'); // Hide Trackbacks Box
-  //remove_meta_box('commentstatusdiv','page','normal'); // Hide Discussion Box
-  //remove_meta_box('commentsdiv','page','normal'); // Hide Comments Box
-  //remove_meta_box('authordiv','page','normal'); // Hide Authors Box
-  //remove_meta_box('revisionsdiv','page','normal'); // Hide Revisions Box
+  //remove_post_type_support("page","revisions"); //Remove Revision Support
+  //remove_post_type_support("page","comments"); //Remove Comments Support
+  //remove_post_type_support("page","author"); //Remove Author Support
+  //remove_post_type_support("page","trackbacks"); //Remove trackbacks Support
+  //remove_post_type_support("page","custom-fields"); //Remove custom-fields Support
+  
 }
 add_action('admin_init','customize_meta_boxes');
 
@@ -88,6 +88,12 @@ add_theme_support( 'automatic-feed-links' );
  * This theme uses post thumbnails
  */
 add_theme_support( 'post-thumbnails' );
+
+/**
+ *	This theme supports editor styles
+ */
+
+add_editor_style("/css/layout-style.css");
 
 /**
  * Disable the admin bar in 3.1
@@ -129,9 +135,26 @@ function remove_dashboard_widgets() {
 	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']); // Recent Drafts widget
 	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']); // Recent Comments widget
 }
+
+/**
+ *	Hide Menu Items
+ */
+function themename_configure_menu_page(){
+	
+	//remove_menu_page("link-manager.php"); //Hide Links
+	//remove_menu_page("edit-comments.php"); //Hide Comments
+	//remove_menu_page("tools.php"); //Hide Tools
+
+}
+
 if (!current_user_can('manage_options')) {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
-} ?>
+	add_action("admin_init","themename_configure_menu_page"); //While we're add it, let's configure the menu options as well
+} 
+
+
+
+?>
 <?php // asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
 //	 change the UA-XXXXX-X to be your site's ID
 /*add_action('wp_footer', 'async_google_analytics');
