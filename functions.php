@@ -149,7 +149,7 @@ function themename_configure_menu_page(){
 
 if (!current_user_can('manage_options')) {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
-	add_action("admin_init","themename_configure_menu_page"); //While we're add it, let's configure the menu options as well
+	add_action("admin_menu","themename_configure_menu_page"); //While we're add it, let's configure the menu options as well
 } 
 
 
