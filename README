@@ -2,15 +2,22 @@
 
 ## Changelog
 
-### v 0.8.3 : January 19th, 2011
+### v 0.8.6 : April 18th, 2011
 
 ## Huge Thanks:
 
 Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 
 Boilerplate.
 
+## Recent Changes (0.8.6)
+
+1. New editor support, so theme designers can choose to include better WYSIWYG support in their themes.
+2. Modified the code for metabox visibility using the remove_post_type_support function provided natively by wordpress.
+3. Some other small changes
+
 ## Recent Changes (0.8.5)
 
+All changes from @alettieri
 1. Small change to loop.php on line 26, reflecting change in Ian Stewart's Toolbox theme
 2. Updated the "remove version number" code so it removes from source and RSS feed
 
