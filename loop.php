@@ -37,7 +37,7 @@
 
 		<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
 		<div class="entry-summary">
-			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'themename' ) ); ?>
+			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
