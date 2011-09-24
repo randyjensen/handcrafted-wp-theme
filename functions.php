@@ -126,9 +126,9 @@ add_action( 'init', 'handcraftedwp_widgets_init' );
 function remove_dashboard_widgets() {
 	global $wp_meta_boxes;
 
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']); // Plugins widget
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']); // WordPress Blog widget
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']); // Other WordPress News widget
+	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']); // Plugins widget
+	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']); // WordPress Blog widget
+	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']); // Other WordPress News widget
 	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']); // Right Now widget
 	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']); // Quick Press widget
 	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']); // Incoming Links widget
@@ -137,21 +137,33 @@ function remove_dashboard_widgets() {
 }
 
 /**
- *	Hide Menu Items
+ *	Hide Menu Items in Admin
  */
-function themename_configure_menu_page(){
-	
-	//remove_menu_page("link-manager.php"); //Hide Links
-	//remove_menu_page("edit-comments.php"); //Hide Comments
-	//remove_menu_page("tools.php"); //Hide Tools
+function themename_configure_dashboard_menu() {
+	global $menu,$submenu;
 
+	global $current_user;
+	get_currentuserinfo();
+
+		// $menu and $submenu will return all menu and submenu list in admin panel
+		
+		// $menu[2] = ""; // Dashboard
+		// $menu[5] = ""; // Posts
+		// $menu[15] = ""; // Links
+		// $menu[25] = ""; // Comments
+		// $menu[65] = ""; // Plugins
+
+		// unset($submenu['themes.php'][5]); // Themes
+		// unset($submenu['themes.php'][12]); // Editor
 }
 
-if (!current_user_can('manage_options')) {
-	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
-	add_action("admin_menu","themename_configure_menu_page"); //While we're add it, let's configure the menu options as well
-} 
 
+// For non-admins, add action to Hide Dashboard Widgets and Admin Menu Items you just set above
+// Don't forget to comment out the admin check to see that changes :)
+if (!current_user_can('manage_options')) {
+	add_action('wp_dashboard_setup', 'remove_dashboard_widgets'); // Add action to hide dashboard widgets
+	add_action('admin_head', 'themename_configure_dashboard_menu'); // Add action to hide admin menu items
+}
 
 
 ?>
