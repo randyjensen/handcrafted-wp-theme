@@ -9,6 +9,10 @@
 Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 
 Boilerplate.
 
+## Recent Changes (0.8.7)
+
+1. Changed the deprecated TEMPLATE path to get_template_directory(). Thanks to MarFarMa for the heads up
+
 ## Recent Changes (0.8.6)
 
 1. New editor support, so theme designers can choose to include better WYSIWYG support in their themes.
