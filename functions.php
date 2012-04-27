@@ -22,6 +22,16 @@ if ( ! isset( $content_width ) )
 	$content_width = 640;
 
 /**
+ * Add jQuery
+ */
+function add_jquery_script() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+    wp_enqueue_script( 'jquery' );
+}    
+add_action('wp_enqueue_scripts', 'add_jquery_script');
+
+/**
  * Remove code from the <head>
  */
 //remove_action('wp_head', 'rsd_link'); // Might be necessary if you or other people on this site use remote editors.
