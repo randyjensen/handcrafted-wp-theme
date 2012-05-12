@@ -106,7 +106,7 @@ add_theme_support( 'post-thumbnails' );
 add_editor_style("/css/layout-style.css");
 
 /**
- * Disable the admin bar completely, or just remove superfluous elements (uncomment as necessary)
+ * Remove superfluous elements from the admin bar (uncomment as necessary)
  */
 function remove_admin_bar_links() 
 {
@@ -123,7 +123,6 @@ function remove_admin_bar_links()
 	//$wp_admin_bar->remove_menu('comments');
 	//$wp_admin_bar->remove_menu('search');
 }
-//show_admin_bar( false );
 //add_action('wp_before_admin_bar_render', 'remove_admin_bar_links');
 
 /**
