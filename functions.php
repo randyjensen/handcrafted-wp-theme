@@ -106,9 +106,25 @@ add_theme_support( 'post-thumbnails' );
 add_editor_style("/css/layout-style.css");
 
 /**
- * Disable the admin bar in 3.1
+ * Disable the admin bar completely, or just remove superfluous elements (uncomment as necessary)
  */
+function remove_admin_bar_links() 
+{
+	global $wp_admin_bar;
+
+	//$wp_admin_bar->remove_menu('wp-logo');
+	//$wp_admin_bar->remove_menu('updates');	
+	//$wp_admin_bar->remove_menu('my-account');
+	//$wp_admin_bar->remove_menu('site-name');
+	//$wp_admin_bar->remove_menu('my-sites');
+	//$wp_admin_bar->remove_menu('get-shortlink');
+	//$wp_admin_bar->remove_menu('edit');
+	//$wp_admin_bar->remove_menu('new-content');
+	//$wp_admin_bar->remove_menu('comments');
+	//$wp_admin_bar->remove_menu('search');
+}
 //show_admin_bar( false );
+//add_action('wp_before_admin_bar_render', 'remove_admin_bar_links');
 
 /**
  * This enables post formats. If you use this, make sure to delete any that you aren't going to use.
