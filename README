@@ -9,6 +9,10 @@
 Ian Stewart for his Toolbox theme and Paul Irish for his HTML5 
 Boilerplate.
 
+## Recent Changes (0.9.0)
+
+1. Code for Apple Touch icons updated in header.php. Thanks to jamescarrier for this.
+
 ## Recent Changes (0.8.9)
 
 1. Removed the code that gets rid of the admin bar in functions.php and added more useful code to remove certain links based on your needs. Thanks to jamescarrier for this.
