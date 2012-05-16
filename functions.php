@@ -126,6 +126,17 @@ function remove_admin_bar_links()
 //add_action('wp_before_admin_bar_render', 'remove_admin_bar_links');
 
 /**
+ *	Replace the default welcome 'howdy' in the admin bar with something more professional.
+ */
+function admin_bar_replace_howdy($wp_admin_bar)
+{
+    $account = $wp_admin_bar->get_node('my-account');
+    $replace = str_replace('Howdy,', 'Welcome,', $account->title);            
+    $wp_admin_bar->add_node(array('id' => 'my-account', 'title' => $replace));
+}
+add_filter('admin_bar_menu', 'admin_bar_replace_howdy', 25);
+
+/**
  * This enables post formats. If you use this, make sure to delete any that you aren't going to use.
  */
 //add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'video', 'gallery', 'chat', 'link', 'quote', 'status' ) );
