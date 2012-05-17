@@ -108,8 +108,7 @@ add_editor_style("/css/layout-style.css");
 /**
  * Remove superfluous elements from the admin bar (uncomment as necessary)
  */
-function remove_admin_bar_links() 
-{
+function remove_admin_bar_links() {
 	global $wp_admin_bar;
 
 	//$wp_admin_bar->remove_menu('wp-logo');
@@ -126,10 +125,9 @@ function remove_admin_bar_links()
 //add_action('wp_before_admin_bar_render', 'remove_admin_bar_links');
 
 /**
- *	Replace the default welcome 'howdy' in the admin bar with something more professional.
+ *	Replace the default welcome 'Howdy' in the admin bar with something more professional.
  */
-function admin_bar_replace_howdy($wp_admin_bar)
-{
+function admin_bar_replace_howdy($wp_admin_bar) {
     $account = $wp_admin_bar->get_node('my-account');
     $replace = str_replace('Howdy,', 'Welcome,', $account->title);            
     $wp_admin_bar->add_node(array('id' => 'my-account', 'title' => $replace));
